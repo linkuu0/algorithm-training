@@ -2,10 +2,11 @@ package programmers.dfs;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class TravelPath {
 
-    private ArrayList<String> answer = new ArrayList<>();
+    private List<String> answer = new ArrayList<>();
     private boolean[] visited;
 
     public void dfs(int level, String curr, String path, String[][] tickets) {
