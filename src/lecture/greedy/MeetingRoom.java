@@ -50,13 +50,4 @@ public class MeetingRoom {
 
         return answer;
     }
-
-    public static void main(String[] args) {
-        MeetingRoom meetingRoom = new MeetingRoom();
-        int[][] case1 = new int[][]{{1,4},{2,3},{3,5},{4,6},{5,7}};
-        int[][] case2 = new int[][]{{3,3},{1,3},{2,3}};
-
-        int answer = meetingRoom.solution(case2);
-        System.out.println("answer = " + answer);
-    }
 }
