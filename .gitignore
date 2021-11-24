@@ -1,0 +1,6 @@
+.idea
+out
+*.iml
+
+src/codility
+src/test
