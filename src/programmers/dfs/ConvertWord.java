@@ -18,14 +18,6 @@ public class ConvertWord {
         }
     }
 
-    public int solution(String begin, String target, String[] words) {
-        answer = words.length + 1;
-        boolean[] visited = new boolean[words.length];
-        dfs(0, begin, target, words, visited);
-
-        return answer == words.length + 1 ? 0 : answer;
-    }
-
     public boolean isTargetWord(String word, String target) {
         int cnt = 0;
         for (int i=0; i<word.length(); i++) {
@@ -36,12 +28,11 @@ public class ConvertWord {
         return cnt == 1;
     }
 
-    public static void main(String[] args) {
-        ConvertWord convertWord = new ConvertWord();
-        int answer = convertWord.solution("hit", "cog",
-                new String[]{"hot", "dot", "dog", "lot", "log", "cog"});
+    public int solution(String begin, String target, String[] words) {
+        answer = words.length + 1;
+        boolean[] visited = new boolean[words.length];
+        dfs(0, begin, target, words, visited);
 
-        System.out.println("answer = " + answer);
-
+        return answer == words.length + 1 ? 0 : answer;
     }
 }

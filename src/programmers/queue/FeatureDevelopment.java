@@ -46,17 +46,11 @@ public class FeatureDevelopment {
             }
 
             finishJobPerDay[time++] = count;
+            count = 0;
         }
 
         return Arrays.stream(finishJobPerDay)
                 .filter(value -> value != 0)
                 .toArray();
-    }
-
-    public static void main(String[] args) {
-        FeatureDevelopment featureDevelopment = new FeatureDevelopment();
-
-        int[] answer = featureDevelopment.solutionUsingQueue(new int[]{93,30,55}, new int[]{1,30,5});
-        System.out.println("answer = " + Arrays.toString(answer));
     }
 }

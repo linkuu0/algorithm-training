@@ -26,13 +26,4 @@ public class Printer {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        Printer printer = new Printer();
-        int answer = printer.solution(new int[]{2,1,3,2}, 2);
-
-        System.out.println("answer = " + answer);
-
-
-    }
 }

@@ -41,11 +41,4 @@ public class TrunkOnBridge {
 
         return time + bridge_length;
     }
-
-    public static void main(String[] args) {
-        TrunkOnBridge trunkOnBridge = new TrunkOnBridge();
-        int answer = trunkOnBridge.solution(2, 10, new int[]{7, 4, 5, 6});
-
-        System.out.println("answer = " + answer);
-    }
 }

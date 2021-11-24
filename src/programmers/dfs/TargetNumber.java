@@ -17,15 +17,4 @@ public class TargetNumber {
     public int solution(int[] numbers, int target) {
         return dfs(0, 0, numbers, target);
     }
-
-    public static void main(String[] args) {
-        TargetNumber test = new TargetNumber();
-        int[] numbers = {1, 1, 1, 1, 1};
-        int target = 5;
-
-        int answer = test.solution(numbers, target);
-        System.out.println("answer = " + answer);
-
-
-    }
 }

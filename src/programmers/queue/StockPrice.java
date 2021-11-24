@@ -23,11 +23,4 @@ public class StockPrice {
 
         return answer;
     }
-
-    public static void main(String[] args) {
-        StockPrice stockPrice = new StockPrice();
-        int[] answer = stockPrice.solution(new int[]{1,2,3,2,3});
-
-        System.out.println("answer = " + Arrays.toString(answer));
-    }
 }

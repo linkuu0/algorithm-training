@@ -41,12 +41,4 @@ public class FindPrime {
 
         return true;
     }
-
-
-    public static void main(String[] args) {
-        FindPrime findPrime = new FindPrime();
-        int answer = findPrime.solution("15");
-
-        System.out.println("answer = " + answer);
-    }
 }

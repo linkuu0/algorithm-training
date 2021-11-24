@@ -25,11 +25,4 @@ public class PreTest {
                 .map(index -> index + 1)
                 .toArray();
     }
-
-    public static void main(String[] args) {
-        PreTest preTest = new PreTest();
-        int[] answer = preTest.solution(new int[]{1, 2, 3, 4, 5});
-
-        System.out.println("answer = " + Arrays.toString(answer));
-    }
 }

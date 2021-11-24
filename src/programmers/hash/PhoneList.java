@@ -20,12 +20,4 @@ public class PhoneList {
 
         return true;
     }
-
-    public static void main(String[] args) {
-        PhoneList phoneList = new PhoneList();
-        boolean answer = phoneList.solution(new String[]{});
-
-        System.out.println("answer = " + answer);
-
-    }
 }

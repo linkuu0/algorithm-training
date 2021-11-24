@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Ssireum {
-
     static class Player implements Comparable<Player> {
         int height;
         int weight;
@@ -38,13 +37,5 @@ public class Ssireum {
         }
 
         return answer;
-    }
-
-    public static void main(String[] args) {
-        Ssireum ssireum = new Ssireum();
-        int[][] players = new int[][] {{172,67}, {183,65}, {180,70}, {170,72}, {181,60}};
-        int answer = ssireum.solution(players);
-
-        System.out.println("answer = " + answer);
     }
 }

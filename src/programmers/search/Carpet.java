@@ -18,11 +18,4 @@ public class Carpet {
 
         return new int[] {width, height};
     }
-
-    public static void main(String[] args) {
-        Carpet carpet = new Carpet();
-        int[] answer = carpet.solution(24, 24);
-
-        System.out.println("answer = " + Arrays.toString(answer));
-    }
 }

@@ -15,16 +15,4 @@ public class Camouflage {
                 .mapToInt(value -> value + 1)
                 .reduce(1, (a, b) -> a * b) - 1;
     }
-
-    public static void main(String[] args) {
-        Camouflage camouflage = new Camouflage();
-        String[][] clothes = new String[][]{
-                {"yellowhat", "headgear"},
-                {"bluesunglasses", "eyewear"},
-                {"green_turban", "headgear"}
-        };
-
-        int answer = camouflage.solution(clothes);
-        System.out.println("answer = " + answer);
-    }
 }

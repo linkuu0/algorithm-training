@@ -39,9 +39,6 @@ public class MeetingRoom {
         }
 
         Collections.sort(times);
-        for (MeetingTime time: times) {
-            System.out.println("time = " + time);
-        }
 
         int lastEndTime = 0;
         for (MeetingTime time: times) {
