@@ -1,4 +1,4 @@
-package programmers;
+package programmers.array;
 
 public class Keypad {
     public String solution(int[] numbers, String hand) {

@@ -1,9 +1,8 @@
-package programmers;
+package programmers.array;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

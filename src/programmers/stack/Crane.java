@@ -1,4 +1,4 @@
-package programmers;
+package programmers.stack;
 
 import org.junit.jupiter.api.Test;
 
