@@ -1,34 +1,39 @@
-package programmers;
+package programmers.dfs;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * [프로그래머스] Lv.3 N-Queen
+ * https://programmers.co.kr/learn/courses/30/lessons/12952
+ */
 public class NQueen {
-    int n;
-    int answer = 0;
+    private int n;
+    private int answer = 0;
+    private int[] col;
 
-    public boolean check(int row, int[] col) {
+    public boolean check(int row) {
         for (int i=0; i<row; i++) {
-            if (col[i] == col[row])
+            if (this.col[i] == this.col[row])
                 return false;
 
-            if (Math.abs(i - row) == Math.abs(col[i] - col[row]))
+            if (Math.abs(i - row) == Math.abs(this.col[i] - this.col[row]))
                 return false;
         }
 
         return true;
     }
 
-    public void dfs(int level, int[] col) {
+    public void dfs(int level) {
         if (level == this.n) {
             answer++;
 
         } else {
             for (int i=0; i<this.n; i++) {
-                col[level] = i;
+                this.col[level] = i;
 
-                if (check(level, col)) {
-                    dfs(level+1, col);
+                if (check(level)) {
+                    dfs(level+1);
                 }
             }
 
@@ -39,10 +44,10 @@ public class NQueen {
         this.n = n;
 
         for (int i=0; i<n; i++) {
-            int[] col = new int[n];
+            this.col = new int[n];
 
-            col[0] = i;
-            dfs(1, col);
+            this.col[0] = i;
+            dfs(1);
         }
 
         return answer;
