@@ -22,10 +22,10 @@ public class ColoringBook {
         for (int i=0; i<m; i++) {
             for (int j=0; j<n; j++) {
                 if (picture[i][j] > 0 && !visited[i][j]) {
-                    size = 1;// 색칠한 부분에 대해서만 탐색
+                    this.size = 1;// 색칠한 부분에 대해서만 탐색
                     dfs(i, j, picture);
-                    areaCount++;
-                    maxSizeArea = Math.max(maxSizeArea, size);
+                    this.areaCount++;
+                    this.maxSizeArea = Math.max(this.maxSizeArea, this.size);
                 }
             }
         }
@@ -34,17 +34,17 @@ public class ColoringBook {
     }
 
     private void dfs(int m, int n, int[][] picture) {
-        visited[m][n] = true;
+        this.visited[m][n] = true;
 
         for (int i=0; i<4; i++) {
             int x = m + dx[i];
             int y = n + dy[i];
 
             if (x >= 0 && y >= 0 && x < picture.length && y < picture[0].length) {
-                if (picture[x][y] == picture[m][n] && !visited[x][y]) {
+                if (picture[x][y] == picture[m][n] && !this.visited[x][y]) {
                     dfs(x, y, picture);
-                    visited[x][y] = true;
-                    size++;
+                    this.visited[x][y] = true;
+                    this.size++;
                 }
             }
         }

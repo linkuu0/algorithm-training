@@ -1,9 +1,12 @@
 package programmers.dfs;
 
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 public class ConvertWord {
     private int answer;
 
-    public void dfs (int level, String curr, String target, String[] words, boolean[] visited) {
+    public void dfs(int level, String curr, String target, String[] words, boolean[] visited) {
         if (target.equals(curr)) {
             answer = Math.min(answer, level);
             return;
@@ -34,5 +37,11 @@ public class ConvertWord {
         dfs(0, begin, target, words, visited);
 
         return answer == words.length + 1 ? 0 : answer;
+    }
+
+    @Test
+    void test() {
+        int answer = solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"});
+        Assertions.assertThat(answer).isEqualTo(4);
     }
 }
